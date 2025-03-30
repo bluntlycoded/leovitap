@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leo Club VITAP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .event-modal {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .event-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    .team-card:hover .member-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .member-info {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed w-full bg-white shadow-md z-50">
+  <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2 sm:space-x-4">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Lions_Clubs_International_logo.svg/400px-Lions_Clubs_International_logo.svg.png" class="h-8 sm:h-12" alt="Lions International">
+      <img src="https://media.collegedekho.com/media/img/institute/logo/VIT-AP_logo.png" class="h-8 sm:h-12" alt="VITAP University">
+    </div>
+    <div class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-blue-600">Home</a>
+      <a href="#about" class="hover:text-blue-600">About</a>
+      <a href="#team" class="hover:text-blue-600">Team</a>
+      <a href="#events" class="hover:text-blue-600">Events</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen pt-16 md:pt-20">
+  <div class="relative h-screen flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90">
+      <img src="/PHOTO-2025-03-13-15-35-16.jpg" class="w-full h-full object-cover mix-blend-overlay" alt="Background">
+    </div>
+    <div class="text-center z-10 px-4" data-aos="zoom-in">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Leo Club VIT-AP University</h1>
+      <p class="text-xl text-white mb-8">Leadership Through Service</p>
+      <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition-all">
+        Join Us Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-12 md:py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
+    <div class="max-w-4xl mx-auto space-y-6 text-gray-600">
+      <p class="text-lg">Welcome to the Leo Club of VIT-AP, a student-led organization affiliated with Lions Clubs International. Our mission is to empower young leaders through community service, leadership training, and personal development.</p>
+      <div class="bg-blue-50 p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-4">Key Initiatives</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-start">
+            <i class="fas fa-hand-holding-heart text-blue-600 mt-1 mr-3"></i>
+            <div>
+              <h4 class="font-semibold">Community Service</h4>
+              <p>Hunger relief programs and orphanage visits</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-3"></i>
+            <div>
+              <h4 class="font-semibold">Awareness Campaigns</h4>
+              <p>Cyber security and mental health initiatives</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-12 md:py-20 bg-[#D3D3D3]">
+  <div class="container mx-auto px-4 sm:px-6" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-12 text-[#1A264A]">Core Team</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- President -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <img src="team/charan.jpg" class="w-full h-64 object-cover" alt="President">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Tangella Sri Ram Charan</h3>
+          <p class="text-[#FFC72C]">President</p>
+        </div>
+      </div>
+
+      <!-- Vice President -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <img src="team/nikhil.jpg" class="w-full h-64 object-cover" alt="Vice President">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Perumalla Sai Nikhil</h3>
+          <p class="text-[#FFC72C]">Vice President</p>
+        </div>
+      </div>
+
+      <!-- Secretary -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <img src="team/varshitha.jpg" class="w-full h-64 object-cover" alt="Secretary">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Varshitha Vecha</h3>
+          <p class="text-[#FFC72C]">Secretary</p>
+        </div>
+      </div>
+
+      <!-- Treasurer -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <img src="team/abhiram.jpg" class="w-full h-64 object-cover" alt="Treasurer">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Chintalagattu Abhiram</h3>
+          <p class="text-[#FFC72C]">Treasurer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- View Full Team Button -->
+    <div class="text-center mt-12">
+      <button onclick="showFullTeam()"
+              class="bg-[#A20000] text-white px-8 py-3 rounded-lg hover:bg-[#1A264A] transition-all
+                           transform hover:scale-105 font-semibold shadow-lg">
+        View Full Team <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Full Team Overlay -->
+<!-- Full Team Overlay -->
+<section id="full-team" class="fixed inset-0 bg-black/90 z-50 overflow-y-auto hidden">
+  <div class="container mx-auto px-4 sm:px-6 py-20">
+    <div class="flex justify-between items-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#FFC72C]">Full Team</h2>
+      <button onclick="hideFullTeam()"
+              class="text-white hover:text-[#FFC72C] text-3xl transition-all">
+        &times;
+      </button>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Club Managers -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/dinesh.jpg" class="w-full h-64 object-cover" alt="Club Manager">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">K. Dinesh</h3>
+          <p class="text-[#FFC72C]">Club Manager</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Club Manager">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">G. Pradeepthi</h3>
+          <p class="text-[#FFC72C]">Club Manager</p>
+        </div>
+      </div>
+
+      <!-- Event Management -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Event Management Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">K. Bhanu Teja</h3>
+          <p class="text-[#FFC72C]">Event Management Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Event Management Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Harshitha</h3>
+          <p class="text-[#FFC72C]">Event Management Co-Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Event Management Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">N. Teja Santhosh</h3>
+          <p class="text-[#FFC72C]">Event Management Co-Lead</p>
+        </div>
+      </div>
+
+      <!-- Marketing -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Marketing Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Raja Shankar</h3>
+          <p class="text-[#FFC72C]">Marketing Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Marketing Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">V. Meghana</h3>
+          <p class="text-[#FFC72C]">Marketing Co-Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Marketing Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Manda Siva Reddy</h3>
+          <p class="text-[#FFC72C]">Marketing Co-Lead</p>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Design Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Srujana Vandanapu</h3>
+          <p class="text-[#FFC72C]">Design Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Design Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Sirikoti Renu Vaishnavi</h3>
+          <p class="text-[#FFC72C]">Design Co-Lead</p>
+        </div>
+      </div>
+
+      <!-- PR -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="PR Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Yadala Hari Charan Yadav</h3>
+          <p class="text-[#FFC72C]">PR Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="PR Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Rishith Kumar Pachipulusu</h3>
+          <p class="text-[#FFC72C]">PR Co-Lead</p>
+        </div>
+      </div>
+
+      <!-- Editing -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Editing Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Sathwik Potu</h3>
+          <p class="text-[#FFC72C]">Editing Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Editing Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Sai Sravan</h3>
+          <p class="text-[#FFC72C]">Editing Co-Lead</p>
+        </div>
+      </div>
+
+      <!-- Documentation -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Documentation Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">V. Dheeraj</h3>
+          <p class="text-[#FFC72C]">Documentation Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Documentation Co-Lead">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">P. Sri Neeraj Reddy</h3>
+          <p class="text-[#FFC72C]">Documentation Co-Lead</p>
+        </div>
+      </div>
+
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/default.jpg" class="w-full h-64 object-cover" alt="Team Member">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Narayana Dheeraj</h3>
+          <p class="text-[#FFC72C]">Team Member</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Team Modal Functions
+  function showFullTeam() {
+    document.getElementById('full-team').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hideFullTeam() {
+    document.getElementById('full-team').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+</script>
+
+<!-- Events Section -->
+<!-- Events Section -->
+<section id="events" class="py-12 md:py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Events</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- CPR Awareness Event -->
+      <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+        <h3 class="text-xl font-bold mb-2">CPR Training Session</h3>
+        <p class="text-gray-600 mb-4">September 30, 2024</p>
+        <button onclick="showEvent('cpr')" class="text-blue-600 hover:underline">
+          Read More <i class="fas fa-chevron-right ml-2"></i>
+        </button>
+      </div>
+
+      <!-- Cybercrime Awareness Event -->
+      <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+        <h3 class="text-xl font-bold mb-2">Cybercrime Awareness Session</h3>
+        <p class="text-gray-600 mb-4">2024</p>
+        <button onclick="showEvent('cybercrime')" class="text-blue-600 hover:underline">
+          Read More <i class="fas fa-chevron-right ml-2"></i>
+        </button>
+      </div>
+
+      <!-- Hunger Relief Program -->
+      <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+        <h3 class="text-xl font-bold mb-2">Hunger Relief Program</h3>
+        <p class="text-gray-600 mb-4">October 27, 2024</p>
+        <button onclick="showEvent('hunger-relief')" class="text-blue-600 hover:underline">
+          Read More <i class="fas fa-chevron-right ml-2"></i>
+        </button>
+      </div>
+
+      <!-- Exam Stress Awareness -->
+      <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+        <h3 class="text-xl font-bold mb-2">Exam Stress Awareness</h3>
+        <p class="text-gray-600 mb-4">February 24, 2025</p>
+        <button onclick="showEvent('exam-stress')" class="text-blue-600 hover:underline">
+          Read More <i class="fas fa-chevron-right ml-2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Event Modals -->
+<div id="cpr" class="event-modal fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-2xl w-full p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-2xl font-bold">CPR Awareness Session</h3>
+      <button onclick="hideEvents()" class="text-3xl">&times;</button>
+    </div>
+    <div class="space-y-4 text-gray-600">
+      <p><strong>Date:</strong> September 30, 2024</p>
+      <p><strong>Venue:</strong> VIT-AP University</p>
+      <p><strong>Highlights:</strong></p>
+      <ul class="list-disc pl-6">
+        <li>Hands-on CPR training with medical professionals</li>
+        <li>Good Samaritan Law overview by Retd. DCP Dr. T. Harikrishna</li>
+        <li>Defibrillator usage demonstration by Dr. Gunturu Varun (Cardiologist)</li>
+        <li>Practical CPR techniques on mannequins</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="cybercrime" class="event-modal fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-2xl w-full p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-2xl font-bold">Cybercrime Awareness Session</h3>
+      <button onclick="hideEvents()" class="text-3xl">&times;</button>
+    </div>
+    <div class="space-y-4 text-gray-600">
+      <p><strong>Date:</strong> 2024</p>
+      <p><strong>Speaker:</strong> S R CH Murty R, SI Cybercrime</p>
+      <p><strong>Key Topics:</strong></p>
+      <ul class="list-disc pl-6">
+        <li>Recognizing phishing scams</li>
+        <li>Protecting personal data on social media</li>
+        <li>Legal consequences of cybercrimes</li>
+        <li>Real-world case studies</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="hunger-relief" class="event-modal fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-2xl w-full p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-2xl font-bold">Hunger Relief Program</h3>
+      <button onclick="hideEvents()" class="text-3xl">&times;</button>
+    </div>
+    <div class="space-y-4 text-gray-600">
+      <p><strong>Date:</strong> October 27, 2024</p>
+      <p><strong>Venue:</strong> Care & Share Orphanage Center, Buddhavaram, Krishna District</p>
+      <p><strong>Activities:</strong></p>
+      <ul class="list-disc pl-6">
+        <li>Interactive games (dodgeball, football)</li>
+        <li>Drawing competitions and dancing</li>
+        <li>Career guidance session for 10th-grade students</li>
+        <li>Distribution of food, chocolates, and sports equipment</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="exam-stress" class="event-modal fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-2xl w-full p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-2xl font-bold">Exam Stress Awareness Campaign</h3>
+      <button onclick="hideEvents()" class="text-3xl">&times;</button>
+    </div>
+    <div class="space-y-4 text-gray-600">
+      <p><strong>Date:</strong> February 24, 2025</p>
+      <p><strong>Venue:</strong> Gowthama E.M. High School, Vijayawada</p>
+      <p><strong>Highlights:</strong></p>
+      <ul class="list-disc pl-6">
+        <li>Motivational session by expert speaker with 20+ years experience</li>
+        <li>One-on-one mentoring sessions</li>
+        <li>Stress management and study techniques</li>
+        <li>Distribution of chocolates and pens</li>
+        <li>Group video declaration: "We are ready for our exams!"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<section id="contact" class="py-12 md:py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+    <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <input type="text" placeholder="Your Name"
+                 class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <input type="email" placeholder="Email Address"
+                 class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+                        <textarea rows="4" placeholder="Message"
+                                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize animations
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+
+  // Event Modal Functions
+  function showEvent(eventId) {
+    document.getElementById(eventId).classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hideEvents() {
+    document.querySelectorAll('.event-modal').forEach(modal => {
+      modal.classList.remove('active');
+    });
+    document.body.style.overflow = 'auto';
+  }
+
+  // Form Handling
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add form submission logic here
+    alert('Thank you for your message! We will respond shortly.');
+    this.reset();
+  });
+
+  // Close modals on outside click
+  window.onclick = function(e) {
+    if(e.target.classList.contains('event-modal')) hideEvents();
+  }
+</script>
+</body>
+</html>
