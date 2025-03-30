@@ -55,7 +55,7 @@
 <section id="home" class="min-h-screen pt-16 md:pt-20">
   <div class="relative h-screen flex items-center justify-center">
     <div class="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90">
-      <img src="https://i.ibb.co/RGGBPMBK/PHOTO-2025-03-13-15-35-16.jpg" class="w-full h-full object-cover mix-blend-overlay" alt="Background">
+      <img src="/PHOTO-2025-03-13-15-35-16.jpg" class="w-full h-full object-cover mix-blend-overlay" alt="Background">
     </div>
     <div class="text-center z-10 px-4" data-aos="zoom-in">
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Leo Club VIT-AP University</h1>
@@ -100,7 +100,15 @@
 <section id="team" class="py-12 md:py-20 bg-[#D3D3D3]">
   <div class="container mx-auto px-4 sm:px-6" data-aos="fade-up">
     <h2 class="text-4xl font-bold text-center mb-12 text-[#1A264A]">Core Team</h2>
+
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <img src="team/anindita.jpg" class="w-full h-64 object-cover" alt="Faculty Coordinator">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Dr. Anindita Shome</h3>
+          <p class="text-[#FFC72C]">Faculty Coordinator</p>
+        </div>
+      </div>
       <!-- President -->
       <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
         <img src="team/charan.jpg" class="w-full h-64 object-cover" alt="President">
@@ -120,13 +128,7 @@
       </div>
 
       <!-- Secretary -->
-      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
-        <img src="team/varshitha.jpg" class="w-full h-64 object-cover" alt="Secretary">
-        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
-          <h3 class="text-xl font-bold">Varshitha Vecha</h3>
-          <p class="text-[#FFC72C]">Secretary</p>
-        </div>
-      </div>
+
 
       <!-- Treasurer -->
       <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
@@ -151,6 +153,7 @@
 
 <!-- Full Team Overlay -->
 <!-- Full Team Overlay -->
+<!-- Full Team Overlay -->
 <section id="full-team" class="fixed inset-0 bg-black/90 z-50 overflow-y-auto hidden">
   <div class="container mx-auto px-4 sm:px-6 py-20">
     <div class="flex justify-between items-center mb-12">
@@ -161,6 +164,51 @@
       </button>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Core Team Members -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <img src="team/anindita.jpg" class="w-full h-64 object-cover" alt="Faculty Coordinator">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Dr. Anindita Shome</h3>
+          <p class="text-[#FFC72C]">Faculty Coordinator</p>
+        </div>
+      </div>
+      <!-- President -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/charan.jpg" class="w-full h-64 object-cover" alt="President">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Tangella Sri Ram Charan</h3>
+          <p class="text-[#FFC72C]">President</p>
+        </div>
+      </div>
+
+      <!-- Vice President -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/nikhil.jpg" class="w-full h-64 object-cover" alt="Vice President">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Perumalla Sai Nikhil</h3>
+          <p class="text-[#FFC72C]">Vice President</p>
+        </div>
+      </div>
+
+      <!-- Secretary -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/varshitha.jpg" class="w-full h-64 object-cover" alt="Secretary">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Varshitha Vecha</h3>
+          <p class="text-[#FFC72C]">Secretary</p>
+        </div>
+      </div>
+
+      <!-- Treasurer -->
+      <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="team/abhiram.jpg" class="w-full h-64 object-cover" alt="Treasurer">
+        <div class="member-info absolute inset-0 bg-[#1A264A]/90 text-white p-4 flex flex-col justify-center items-center text-center">
+          <h3 class="text-xl font-bold">Chintalagattu Abhiram</h3>
+          <p class="text-[#FFC72C]">Treasurer</p>
+        </div>
+      </div>
+
+      <!-- Additional Team Members -->
       <!-- Club Managers -->
       <div class="team-card relative bg-white rounded-xl overflow-hidden shadow-lg">
         <img src="team/dinesh.jpg" class="w-full h-64 object-cover" alt="Club Manager">
@@ -306,7 +354,6 @@
     </div>
   </div>
 </section>
-
 <script>
   // Team Modal Functions
   function showFullTeam() {
